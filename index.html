@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Under The Same Sky</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<audio id="bgMusic" autoplay loop>
+  <source src="/music/Cyberpunk_Edgerunners_“I_Really_Want_to_Stay_At_Your_House”_by_Rosa_Walton_Music_Video_320k.mp3" type="audio/mpeg">
+</audio>
+
+<div id="password-screen">
+    <div id="password-content">
+        <h1>Letters To You</h1>
+        <div id="password-box">
+            <p>Enter the monopassword 💙🐒</p>
+            <input type="password" id="passwordInput">
+            <button onclick="checkPassword()">Enter</button>
+        </div>   
+    </div>
+</div>
+
+<div id="main-content" class="hidden">
+  <header>
+    <h1>Letters To You</h1>
+    <p>A love letter to my mona</p>
+  </header>
+
+  <section class="letter">
+    <h2>Always And Forever</h2>
+    <h3>21 Feb, 2026</h3>
+    <p>
+      Dear Hanna,
+      <br><br>
+      
+I’m not sure how to navigate the waters that are ahead of us.
+<br>
+I’ve accepted the fact that the only thing that can heal us now is time.
+<br>
+I need to let you breathe, I need to let you figure out your feelings. I need to be careful enough not to make you sigh and say: ‘not this again, not this guy… ‘
+<br>
+But time.. Time is also the thing that can make us move on and grow apart.
+<br>
+So, you see.. I am at an impasse right now
+<br>
+On one hand, the reality of the pain I caused you and the dreadful consequences that came with it.
+<br>
+On the other, the unstoppable feeling that burst out of my heart screaming DON’T YOU DARE GIVE UP NOW!
+<br>
+Ultimately, I must let things play out and run the risk of losing you for good.
+<br>
+But I will not go down without a fight. And another fight, and another fight… Because you deserve nothing less than that.
+<br>
+And as long as I live and breathe, I will still be your mono, your love, your heart.
+<br>
+With that in mind, I built this website. 
+<br>
+It’s a love letter to you, and I’ll share anything here; from grandiose badly written poems to small stuff like how my day was. 
+
+
+      
+      <br><br>
+      Forever yours,
+      <br><br>
+        Franz
+    </p>
+
+    <img src="/me_and_my_love_1.jpg" alt="Us together">
+    <!--
+    <button onclick="document.getElementById('song').play()">Play Our Song</button>
+    <audio id="song" src="yoursong.mp3"></audio>
+     -->
+  </section>
+
+
+<!--
+<section class="letter">
+    <h2>Always And Forever</h2>
+    <h3>21 Feb, 2026</h3>
+    <p>
+      Dear Hanna,
+      <br><br>
+      
+I’m not sure how to navigate the waters that are ahead of us.
+<br>
+I’ve accepted the fact that the only thing that can heal us now is time.
+<br>
+I need to let you breathe, I need to let you figure out your feelings. I need to be careful enough not to make you sigh and say: ‘not this again, not this guy… ‘
+<br>
+But time.. Time is also the thing that can make us move on and grow apart.
+<br>
+So, you see.. I am at an impasse right now
+<br>
+On one hand, the reality of the pain I caused you and the dreadful consequences that came with it.
+<br>
+On the other, the unstoppable feeling that burst out of my heart screaming DON’T YOU DARE GIVE UP NOW!
+<br>
+Ultimately, I must let things play out and run the risk of losing you for good.
+<br>
+But I will not go down without a fight. And another fight, and another fight… Because you deserve nothing less than that.
+<br>
+And as long as I live and breathe, I will still be your mono, your love, your heart.
+<br>
+With that in mind, I built this website. 
+<br>
+It’s a love letter to you, and I’ll share anything here; from grandiose badly written poems to small stuff like how my day was. 
+
+
+      
+      <br><br>
+      Forever yours,
+      <br><br>
+        Franz
+    </p>
+
+    <img src="/img/me and my love 1.jpg" alt="Us together">
+    
+    <button onclick="document.getElementById('song').play()">Play Our Song</button>
+    <audio id="song" src="yoursong.mp3"></audio>
+
+  </section>
+-->
+
+</div>
+
+
+<script>
+let musicStarted = false;
+
+function startMusic() {
+  if (!musicStarted) {
+    const music = document.getElementById("bgMusic");
+    music.volume = 0;
+    music.play();
+    
+    // Smooth fade-in
+    let fade = setInterval(() => {
+      if (music.volume < 0.8) {
+        music.volume += 0.05;
+      } else {
+        clearInterval(fade);
+      }
+    }, 200);
+
+    musicStarted = true;
+  }
+}
+
+function checkPassword() {
+  const password = "1234";
+  const input = document.getElementById("passwordInput").value;
+
+  if(input === password) {
+    document.getElementById("password-screen").style.display = "none";
+    document.getElementById("main-content").classList.remove("hidden");
+  } else {
+    alert("Wrong password 💔");
+  }
+}
+</script>
+
+</body>
+</html>
