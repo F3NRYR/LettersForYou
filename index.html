@@ -12,17 +12,17 @@
   <source src="song2.mp3" type="audio/mpeg">
 </audio>
 -->
-<audio controls>
+<audio id="bgMusic" loop>
   <source src="song1.mp3" type="audio/mpeg">
 </audio>
   
-<div id="password-screen">
+<div id="password-screen" onclick="startMusic()">
     <div id="password-content">
         <h1>Letters To You</h1>
         <div id="password-box">
             <p>Enter the monopassword 💙🐒</p>
             <input type="password" id="passwordInput">
-            <button onclick="checkPassword()">Enter</button>
+            <button onclick="checkPassword(event)">Enter</button>
         </div>   
     </div>
 </div>
@@ -130,7 +130,7 @@ It’s a love letter to you, and I’ll share anything here; from grandiose badl
 
 </div>
 
-
+<!--
 <script>
 let musicStarted = false;
 
@@ -165,10 +165,49 @@ function checkPassword() {
   }
 }
 </script>
+-->
 
+<script>
+let musicStarted = false;
+
+function startMusic() {
+  if (!musicStarted) {
+    const music = document.getElementById("bgMusic");
+    music.volume = 0;
+    music.play().catch(() => {});
+
+    let fade = setInterval(() => {
+      if (music.volume < 0.8) {
+        music.volume += 0.05;
+      } else {
+        clearInterval(fade);
+      }
+    }, 200);
+
+    musicStarted = true;
+  }
+}
+
+function checkPassword(event) {
+  event.stopPropagation();
+
+  const correctPassword = "yoursecretword";
+  const input = document.getElementById("passwordInput").value.trim();
+
+  if (input === correctPassword) {
+    document.getElementById("password-screen").style.display = "none";
+    document.getElementById("main-content").classList.remove("hidden");
+  } else {
+    alert("Wrong password 💔");
+  }
+}
+</script>
+
+  
 </body>
 
 </html>
+
 
 
 
