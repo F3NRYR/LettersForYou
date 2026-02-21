@@ -59,7 +59,7 @@ button:hover {
 
 #password-content{
   height: 50%;
-  background-image: url(edgerunners.webp);
+  background-image: url(img2.webp);
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -68,6 +68,7 @@ button:hover {
 }
 
 #main-content{
-  background-image: url(background_main.jpg);
+  background-image: url(background.jpg);
 }
+
 
