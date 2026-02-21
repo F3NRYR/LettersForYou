@@ -59,7 +59,7 @@ button:hover {
 
 #password-content{
   height: 50%;
-  background-image: url(/img2.webp);
+  background-image: url(img2.webp);
   background-position: center;
   display: flex;
   flex-direction: column;
@@ -68,9 +68,10 @@ button:hover {
 }
 
 #main-content{
-  background-image: url(/background.jpg);
+  background-image: url(background.jpg);
 }
 
 #subtitle {
   color: yellow;
 }
+
