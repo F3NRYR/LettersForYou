@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: #111111;
+  color: white;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+header {
+  padding: 80px 20px;
+}
+
+h1 {
+  font-size: 3em;
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+.letter {
+  max-width: 600px;
+  margin: 0 auto 100px;
+  padding: 30px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.letter img {
+  width: 100%;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: white;
+  color: #0b0f1a;
+}
+
+.hidden {
+  display: none;
+}
+
+#password-screen {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#password-content{
+  height: 50%;
+  background-image: url(/img2.webp);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#main-content{
+  background-image: url(/background.jpg);
+}
+
+#subtitle {
+  color: yellow;
+}
