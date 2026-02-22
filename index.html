@@ -16,10 +16,13 @@
 </head>
 <body>
 
+<!--
 <audio id="bgMusic" autoplay loop>
   <source src="mbv.mp3" type="audio/mpeg">
 </audio>
-
+-->
+<audio id="bgMusic" autoplay loop src="music/song1.mp3"></audio>
+ 
 <div id="password-screen" onclick="startMusic()">
     <div id="password-content">
         <h1>Letters To You</h1>
@@ -38,6 +41,11 @@
   </header>
 
 <section class="letter">
+  
+  <button onclick="changeSong('./music/tvgirl.mp3')">
+  Press play 🎵
+  </button>
+  
   <h2>The Kiwi Chronicles</h2>
   <p>
     Hi 😊
@@ -122,6 +130,11 @@ Franz
 </section>
 
 <section class="letter">
+
+    <button onclick="changeSong('./music/mbv.mp3')">
+  Press play 🎵
+  </button>
+    
     <h2>Another Day</h2>
     <h3></h3>
     <p>Dear Hanna,
@@ -320,11 +333,22 @@ function checkPassword(event) {
     alert("Wrong password 💔");
   }
 }
+
+const player = document.getElementById("bgMusic");
+
+  function changeSong(songFile) {
+    player.src = songFile;
+    player.load();
+    player.play();
+  }
+  
+  
 </script>
 
 </body>
 
 </html>
+
 
 
 
