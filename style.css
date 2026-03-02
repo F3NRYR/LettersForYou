@@ -20,7 +20,8 @@ h1 {
   max-width: 600px;
   margin: 0 auto 100px;
   padding: 30px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(0,0,0,0.8);
+  /*background: rgba(255,255,255,0.05);*/
   border-radius: 15px;
   backdrop-filter: blur(5px);
 }
@@ -68,10 +69,11 @@ button:hover {
 }
 
 #main-content{
-  background-image: url(background.jpg);
+  background-image: url(bk3.webp);
 }
 
 #subtitle {
   color: yellow;
 }
+
 
